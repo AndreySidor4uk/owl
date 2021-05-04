@@ -22,6 +22,13 @@ class FinSource(TimeStampedModel):
         db_index=True,
         verbose_name='Заголовок'
     )
+    category = models.ForeignKey(
+        FinCategory,
+        on_delete=models.SET_NULL,
+        related_name='sources',
+        null=True,
+        blank=True
+    )
 
     class Meta:
         verbose_name = 'Источник доходов/расходов'

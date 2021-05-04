@@ -26,3 +26,23 @@ class FinSource(TimeStampedModel):
     class Meta:
         verbose_name = 'Источник доходов/расходов'
         verbose_name_plural = 'Источники доходов/расходов'
+
+
+class FinAccount(TimeStampedModel):
+    account_number = models.CharField(
+        max_length=100,
+        unique=True,
+        db_index=True,
+        verbose_name='Номер/идентификатор счета'
+    )
+    title = models.CharField(
+        max_length=150,
+        verbose_name='Заголовок'
+    )
+    balane = models.DecimalField(
+        verbose_name='Баланс счета'
+    )
+
+    class Meta:
+        verbose_name = 'Счет'
+        verbose_name_plural = 'Счета'

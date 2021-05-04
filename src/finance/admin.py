@@ -1,3 +1,7 @@
 from django.contrib import admin
+from finance.models import FinCategory
 
-# Register your models here.
+
+@admin.register(FinCategory)
+class FinCategoryAdmin(admin.ModelAdmin):
+    pass

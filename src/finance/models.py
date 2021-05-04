@@ -13,3 +13,16 @@ class FinCategory(TimeStampedModel):
     class Meta:
         verbose_name = 'Категория'
         verbose_name_plural = 'Категории'
+
+
+class FinSource(TimeStampedModel):
+    title = models.CharField(
+        max_length=150,
+        unique=True,
+        db_index=True,
+        verbose_name='Заголовок'
+    )
+
+    class Meta:
+        verbose_name = 'Источник доходов/расходов'
+        verbose_name_plural = 'Источники доходов/расходов'

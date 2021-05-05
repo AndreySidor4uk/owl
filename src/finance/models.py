@@ -27,7 +27,8 @@ class FinSource(TimeStampedModel):
         on_delete=models.SET_NULL,
         related_name='sources',
         null=True,
-        blank=True
+        blank=True,
+        verbose_name='Категория'
     )
 
     class Meta:

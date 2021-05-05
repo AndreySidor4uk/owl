@@ -1,5 +1,5 @@
 from django.contrib import admin
-from finance.models import FinCategory, FinSource, FinAccount
+from finance.models import FinCategory, FinSource, FinAccount, FinOperation
 
 
 @admin.register(FinCategory)
@@ -14,4 +14,9 @@ class FinSourceAdmin(admin.ModelAdmin):
 
 @admin.register(FinAccount)
 class FinAccountAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(FinOperation)
+class FinOperationtAdmin(admin.ModelAdmin):
     pass
